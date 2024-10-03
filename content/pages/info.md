@@ -13,11 +13,13 @@ sections:
   - elementId: ''
     colors: colors-f
     backgroundSize: full
-    text: >-
-      ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
-      also where I’m based. I’m currently a free agent, ex-this, ex-that,
-      ex-super big name. When I’m not coding, writing or creating, I eat
-      cereals. I have a dog, check her out [@mygod](https://www.stackbit.com/).
+    text: >+
+      ## I am a full-stack web developer that loves working on API's, django
+      template websites and SPA's(using react) based on requirements. Depending
+      on the context of a project, i can be a freelancer or employed to an
+      organisation, i am open to either options and more based on negotiations.
+      I like bringing ideas to life through code to have a real life impact.
+
     media:
       type: ImageBlock
       url: /images/about.jpg
