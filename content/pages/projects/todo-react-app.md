@@ -15,7 +15,7 @@ featuredImage:
 media:
   type: ImageBlock
   url: /images/todo-app.png
-  altText: Project image
+  altText: Todo react image
   caption: Caption of the image
   elementId: ''
 addTitleSuffix: true
