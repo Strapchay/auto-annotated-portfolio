@@ -4,8 +4,8 @@ title: 'Todo React '
 date: '2024-08-15'
 client: Side Project
 description: >-
-  Nunc rutrum felis dui, ut consequat sapien scelerisque vel. Integer
-  condimentum dignissim justo vel faucibus.
+  A port of the todo project built with react and with redux for state
+  management
 featuredImage:
   type: ImageBlock
   url: 'https://assets.stackbit.com/components/images/default/post-4.jpeg'
