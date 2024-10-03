@@ -11,7 +11,7 @@ featuredImage:
   altText: todo redux image
 media:
   type: ImageBlock
-  url: /images/bg1.jpg
+  url: /images/todo_rdx.png
   altText: Project image
 ---
 
