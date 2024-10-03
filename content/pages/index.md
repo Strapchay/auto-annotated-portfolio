@@ -14,7 +14,7 @@ sections:
     colors: colors-f
     backgroundSize: full
     title: >-
-      I’m a FULL-Stack web developer that loves making apps that have impacton
+      I’m a FULL-Stack web developer that loves making apps that have impact in
       the real world.
     subtitle: >-
       This is my info—I’m sharing it all this with ya’ll to impress you with all
