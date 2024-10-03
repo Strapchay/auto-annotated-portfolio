@@ -12,7 +12,7 @@ description: >-
 featuredImage:
   type: ImageBlock
   url: /images/todo-app.png
-  altText: Project thumbnail image
+  altText: Todo app thumbnail image
 media:
   type: ImageBlock
   url: /images/bg3.jpg
