@@ -14,11 +14,10 @@ sections:
     colors: colors-f
     backgroundSize: full
     text: >+
-      ## I am a full-stack web developer that loves working on API's, django
-      template websites and SPA's(using react) based on requirements. Depending
-      on the context of a project, i can be a freelancer or employed to an
-      organisation, i am open to either options and more based on negotiations.
-      I like bringing ideas to life through code to have a real life impact.
+      ## I love working on API's, django template websites and SPA's based on
+      requirements. Depending on the context of a project, i can be a freelancer
+      and am open to other options and more based on negotiations. I like
+      bringing ideas to life through code to have a real life impact.
 
     media:
       type: ImageBlock
