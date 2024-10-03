@@ -10,7 +10,7 @@ description: >-
   project whilst starting out with it.
 featuredImage:
   type: ImageBlock
-  url: /images/bg2.jpg
+  url: /images/journal-app.png
   altText: Project thumbnail image
 media:
   type: ImageBlock
