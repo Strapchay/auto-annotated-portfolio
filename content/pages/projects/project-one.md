@@ -16,5 +16,5 @@ media:
 ---
 This project was meant to implement and learn redux logic for state management, it was a basic implementation and usage of redux.
 
-Github: https\://github.com/Strapchay/todo\_redux\_basic
-Website: https\://master--todo-rdx.netlify.app/
+Github repo: [todo\_redux\_basic](https://github.com/Strapchay/todo_redux_basic)
+Website: [todo-rdx](https://master--todo-rdx.netlify.app/)
