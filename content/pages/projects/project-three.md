@@ -5,9 +5,10 @@ colors: colors-a
 date: '2023-10-10'
 client: Side Project
 description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably
-  because I worked with an entire team :) but they definitely followed my lead
-  most of the time.
+  It was great working on this project, its design and implementations were
+  original but did draw some concepts from google's notes app. It was fun
+  working on its responsivity and its offline capabilities even though its not a
+  PWA.
 featuredImage:
   type: ImageBlock
   url: /images/bg3.jpg
