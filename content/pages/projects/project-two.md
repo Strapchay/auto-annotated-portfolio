@@ -24,3 +24,7 @@ A lot of hurdles were faced when writing the html and styling of the project, in
 Also,  i implemented the MVC pattern to separate the logic for the app, this proved to make the code more verbose to follow on the pattern but it also allowed more reasonability on the code and ease to change specific logic where necessary, since its easy to track the specific point or know the specific place a bug might have occurred.
 
 For the backend/api, i made use of Django & Django REST Framework. Implemented a Token based login which had a 3 days expiration period and the all range of authentication flow needed for a project. I had tests for each functionalities.  The api is built on Docker and allowed learning the concept of microservices within the concept of the project and deploying with github actions.
+
+Github repo FE: https\://github.com/Strapchay/journal\_app
+Github repo BE: https\://github.com/Strapchay/journal\_api
+BE: https\://journalinghub.ddns.net/api/docs
