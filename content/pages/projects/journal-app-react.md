@@ -4,8 +4,8 @@ title: Journal React
 date: '2024-09-30'
 client: Side project
 description: >-
-  Nunc rutrum felis dui, ut consequat sapien scelerisque vel. Integer
-  condimentum dignissim justo vel faucibus.
+  A journal app that replicates the app written in vanilla JS in react, making
+  use of react query for state management
 featuredImage:
   type: ImageBlock
   url: 'https://assets.stackbit.com/components/images/default/post-4.jpeg'
