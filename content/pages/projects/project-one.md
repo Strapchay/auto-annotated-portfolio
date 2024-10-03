@@ -4,10 +4,7 @@ title: Todo React Redux
 colors: colors-a
 date: '2024-06-12'
 client: Side Project
-description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably
-  because I worked with an entire team :) but they definitely followed my lead
-  most of the time.
+description: A basic react app that uses redux for state management
 featuredImage:
   type: ImageBlock
   url: /images/bg1.jpg
