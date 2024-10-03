@@ -16,7 +16,17 @@ sections:
     title: >-
       I’m a FULL-Stack web developer that loves making apps that have impact in
       the real world.
-    subtitle: "Having 3+ years experience as a full-stack web developer allows me to navigate various aspects of software development. I bring a comprehensive approach to building scalable and efficient systems. With a huge focus on testing, clean code and code maintainability in general.\_. My expertise lies in a comprehensive range of technologies including Python, Django, Flask, FastAPI, JavaScript, TypeScript, React, Next.js, Node.js, Express, GraphQL, AWS, GCP and many more. With a deep understanding of these tools and frameworks, I excel in crafting dynamic and scalable full-stack applications that meet the evolving needs of modern businesses. Let me bring my wealth of experience and technical prowess to your next project."
+    subtitle: >-
+      Having 3+ years experience as a full-stack web developer allows me to
+      navigate various aspects of software development. I bring a comprehensive
+      approach to building scalable and efficient systems. With a huge focus on
+      testing, clean code and code maintainability in general. My expertise lies
+      in a comprehensive range of technologies including Python, Django, Flask,
+      FastAPI, JavaScript, TypeScript, React, Next.js, Node.js, Express,
+      GraphQL, AWS, GCP and many more. With a deep understanding of these tools
+      and frameworks, I excel in crafting dynamic and scalable full-stack
+      applications that meet the evolving needs of modern businesses. Let me
+      bring my wealth of experience and technical prowess to your next project.
     styles:
       self:
         height: auto
