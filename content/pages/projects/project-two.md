@@ -11,7 +11,7 @@ description: >-
 featuredImage:
   type: ImageBlock
   url: /images/journal-app.png
-  altText: Project thumbnail image
+  altText: Journal app thumbnail image
 media:
   type: ImageBlock
   url: /images/journal-app.png
