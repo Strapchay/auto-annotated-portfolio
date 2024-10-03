@@ -15,7 +15,7 @@ featuredImage:
   altText: Todo app thumbnail image
 media:
   type: ImageBlock
-  url: /images/bg3.jpg
+  url: /images/todo-app.png
   altText: Project image
 ---
 
