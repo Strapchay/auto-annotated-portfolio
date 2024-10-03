@@ -17,9 +17,10 @@ sections:
       I’m a FULL-Stack web developer that loves making apps that have impact in
       the real world.
     subtitle: >-
-      This is my info—I’m sharing it all this with ya’ll to impress you with all
-      the hard work I’ve done in the past few years. Once you’re impressed, you
-      can continue to scroll down to see more details and credentials about me.
+      Having 3+ years experience as a full-stack web developer allows me to
+      navigate various aspects of software development. I bring a comprehensive
+      approach to building scalable and efficient systems. With a huge focus on
+      testing, clean code and code maintainability in general.
     styles:
       self:
         height: auto
