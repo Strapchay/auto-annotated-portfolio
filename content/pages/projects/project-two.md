@@ -25,6 +25,6 @@ Also,  i implemented the MVC pattern to separate the logic for the app, this pro
 
 For the backend/api, i made use of Django & Django REST Framework. Implemented a Token based login which had a 3 days expiration period and the all range of authentication flow needed for a project. I had tests for each functionalities.  The api is built on Docker and allowed learning the concept of microservices within the concept of the project and deploying with github actions.
 
-Github repo FE: https\://github.com/Strapchay/journal\_app
-Github repo BE: https\://github.com/Strapchay/journal\_api
-BE: https\://journalinghub.ddns.net/api/docs
+Github repo FE: [journal\_app](https://github.com/Strapchay/journal_app)
+Github repo BE: [journal\_api](https://github.com/Strapchay/journal_api)
+BE Docs: [journal\_api\_docs](https://journalinghub.ddns.net/api/docs)
