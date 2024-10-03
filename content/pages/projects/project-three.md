@@ -3,7 +3,7 @@ type: ProjectLayout
 title: Todo App JS
 colors: colors-a
 date: '2023-10-10'
-client: Awesome client
+client: Side Project
 description: >-
   It’s hard to imagine that I’ve that I wrote all this code by myself, probably
   because I worked with an entire team :) but they definitely followed my lead
