@@ -68,7 +68,7 @@ sections:
         altText: Logo one
         caption: Logo one
       - type: ImageBlock
-        url: /images/logo5.svg
+        url: /images/7hills.webp
         altText: Logo five
         caption: Logo five
     spacing: 3
