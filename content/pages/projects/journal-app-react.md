@@ -9,7 +9,7 @@ description: >-
 featuredImage:
   type: ImageBlock
   url: /images/journal-app.png
-  altText: Project thumbnail image
+  altText: journal react image
   caption: ''
   elementId: ''
 media:
