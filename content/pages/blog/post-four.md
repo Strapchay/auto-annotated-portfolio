@@ -102,33 +102,134 @@ bottomSections:
       text:
         textAlign: left
 ---
+When working with remote state management in a react project, react-query is one of the available options to go for and my technology of choice for this use-case.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Curabitur at auctor sapien. Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem pellentesque fermentum. Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem semper. Donec sed facilisis nibh. Curabitur eget dui in libero euismod commodo nec sit amet est. Etiam id ipsum aliquam, vehicula erat sit amet, consequat tortor.
+Working with react-query’s `useInfinteQuery` hook comes into use when enhancing the user’s experience in terms of relation to paginated data. The classic approach is to render a pagination navigator to move through each and specific resources. However, based on specific use-cases which might include loading a chat list or serving contents in the case of social networks like Instagram and the likes, useInfiniteQuery is a great hook.
 
-## Heading 2
+In my case, i had to work on a chat application which required listing both the previous conversations of the user and also fetch newly updated data to keep the UI state in sync with the remote state(DB). Fair enough, react-query provides a plug-and-play interface to perform most use-cases in relation to this functionality, automatically fetching both previous and next page depending on the method called and based on your outlined logic within the `getNextPageParams` or the `getPrevPageParams` options. It also provides a `refetch`option to re-fetch all pages contained within the infiniteQueries result which it performs by fetching sequentially as according to their docs [here](https://tanstack.com/query/latest/docs/framework/react/guides/infinite-queries#what-happens-when-an-infinite-query-needs-to-be-refetched.). However, when it comes to having to re-fetch a specific page and keeping the rest of the data stale, you would have to drop down to manually mutating and implementing your desired logic which is what this write-up is meant to address.
 
-Etiam facilisis lacus nec pretium lobortis. Praesent dapibus justo non efficitur efficitur. Nullam viverra justo arcu, eget egestas tortor pretium id. Sed imperdiet mattis eleifend. Vivamus suscipit et neque imperdiet venenatis. In malesuada sed urna eget vehicula. Donec fermentum tortor sit amet nisl elementum fringilla. Pellentesque dapibus suscipit faucibus. Nullam malesuada sed urna quis rutrum. Donec facilisis lorem id maximus mattis. Vestibulum quis elit magna. Vestibulum accumsan blandit consequat. Phasellus quis posuere quam.
+In my case, using a websocket as the base logic for the chat interactions, means i can always get updated data as responses, this gives an ability to access the updated data in real-time but it doesn’t bridge the gap of making the api data held within the inifiniteQueries pages up-to-date except those data are immediately invalidated on each new data pushed in or gotten from the websocket connection. Depending on philosophies, you might prefer re-fetching all the pages, but i would differ on that. Keeping state of the data sent and gotten from the websocket would be a more resource focused approach however, it does introduce the complexity of syncing the data with the inifiniteQueries result and with this, manually fetching the latest page and adding to the infiniteQueries results would be a better approach, as the already fetched data in the infiniteQueries needs to be Stale for pages the user already fetched.
 
-### Heading 3
+Following from my preferred approach, when the websocket state data is the same as the amount of data returned per-page, the last page cached within the hook is then fetched and pushed into the inifiniteQueries pages, which would mean, replacing the page data at that index with the updated one and then refetching the latest page available to account for any difference in state. To implement this, the following hook was used:
 
-Vestibulum ullamcorper risus auctor eleifend consequat. Vivamus mollis in tellus ac ullamcorper. Vestibulum sit amet bibendum ipsum, vitae rutrum ex. Nullam cursus, urna et dapibus aliquam, urna leo euismod metus, eu luctus justo mi eget mauris. Proin felis leo, volutpat et purus in, lacinia luctus eros. Pellentesque lobortis massa scelerisque lorem ullamcorper, sit amet elementum nulla scelerisque.
+```
+export function useInvalidateResourceLastPage(dataState) {
+ const queryClient = useQueryClient();
+ const { resourceId } = useParams();
+ const lastCachedPageNum = useRef(null);
+ const [invalidatePage, setInvalidatePage] = useState(false); //state to trigger refetching
+ const [dataRefreshed, setDataRefreshed] = useState(false); //external state to notify the component using the hook fresh data is available
 
-```javascript
-{
-  page.content && (
-    <Markdown
-      options={{ forceBlock: true, overrides: { pre: HighlightedPreBlock } }}
-      className="sb-markdown max-w-screen-md mx-auto"
-      data-sb-field-path="content"
-    >
-      {page.content}
-    </Markdown>
-  );
+ const {
+   isPending: isLoading,
+   data: updatedData,
+   status,
+   refetch,
+ } = useQuery({
+   queryKey: [“resourceName”, { page: lastCachedPageNum.current }],
+   queryFn: () =>
+   getResource({ pageParam: lastCachedPageNum.current, resourceId }),
+   enabled: !!lastCachedPageNum.current,
+ });
+
+ useEffect(() => {
+   if (invalidatePage) {
+     const lastCachedPage = dataState?.pages[dataState?.pages.length — 1];
+     const newCachedLastPage = getLastCachedPageNum(lastCachedPage);
+     setDataRefreshed((_) => false);
+      if (newCachedLastPage === lastCachedPageNum.current) refetch(); 
+//if the cached page to fetch is same as the last cached page, then refetch the useQuery data else set the last cached page as that value
+    else lastCachedPageNum.current = newCachedLastPage;
+ }
+ }, [invalidatePage, dataState, queryClient, refetch]);
+
+useEffect(() => {
+   if (!isLoading && status === “success” && updatedData) {
+   queryClient.setQueryData([“resourceName”, resourceId], (data) =>
+     updateQueryData(data, “add”, lastCachedPageNum.current, updatedData),
+   );
+   setDataRefreshed((_) => true);
+   setInvalidatePage((_) => false);
+   }
+ }, [
+ resourceId,
+ isLoading,
+ status,
+ updatedData,
+ queryClient,
+ lastCachedPageNum,
+ ]);
+
+function invalidateLastQuery() {
+ setInvalidatePage((_) => true);
+ }
+} 
+return { invalidateLastQuery, dataRefreshed };
 }
 ```
 
-In volutpat efficitur nulla, aliquam ornare lectus ultricies ac. Mauris sagittis ornare dictum. Nulla vel felis ut purus fermentum pretium. Sed id lectus ac diam aliquet venenatis. Etiam ac auctor enim. Nunc velit mauris, viverra vel orci ut, egestas rhoncus diam. Morbi scelerisque nibh tellus, vel varius urna malesuada sed. Etiam ultricies sem consequat, posuere urna non, maximus ex. Mauris gravida diam sed augue condimentum pulvinar vel ac dui. Integer vel convallis justo.
+From the above code, the resourceId being the id of the current chat in question. The `invalidateLastQuery` is used and exposed to the component using this hook to invalidate the last cached page which is the last page contained in the infiniteQueries page, after which the first use effect is executed and based on that value gotten and then it gets the value of the page to invalidate using the `getLastCachedPageNum` function which would be based on the logic you are using to get the page to be invalidated, the function checks the page’s url to determine what the current page is since the api only returns the next and previous pages value in its url. The function looks as follows:
 
-Nam rutrum magna sed pellentesque lobortis. Etiam quam mauris, iaculis eget ex ac, rutrum scelerisque nisl. Cras finibus dictum ex sed tincidunt. Morbi facilisis neque porta, blandit mauris quis, pharetra odio. Aliquam dictum quam quis elit auctor, at vestibulum ex pulvinar. Quisque lobortis a lectus quis faucibus. Nulla vitae pellentesque nibh, et fringilla erat. Praesent placerat ac est at tincidunt. Praesent ultricies a ex at ultrices. Etiam sed tincidunt elit. Nulla sagittis neque neque, ultrices dignissim sapien pellentesque faucibus. Donec tempor orci sed consectetur dictum. Ut viverra ut enim ac semper. Integer lacinia sem in arcu tempor faucibus eget non urna. Praesent vel nunc eu libero aliquet interdum non vitae elit. Maecenas pharetra ipsum dolor, et iaculis elit ornare ac.
+```
+export function getLastCachedPageNum(cachedPage) {
+ let pageNum = 0;
+ let nextNum = Number(
+   cachedPage?.next ? getUrlPageQuery(cachedPage?.next) : 0,
+ );
+ let prevNum = Number(
+   cachedPage?.previous ? getUrlPageQuery(cachedPage.previous) : 0,
+ );
+ if (nextNum === 0 && prevNum !== 0) pageNum = prevNum += 1;
+ if (prevNum === 0 && nextNum !== 0) pageNum = nextNum -= 1;
+ if (cachedPage?.previous && prevNum === 0 && nextNum === 0) pageNum = 2;
+ if (!cachedPage?.previous && prevNum === 0 && nextNum === 0) pageNum = 1;
+ return pageNum;
+}
+```
 
-Aenean scelerisque ullamcorper est aliquet blandit. Donec ac tellus enim. Vivamus quis leo mattis, varius arcu at, convallis diam. Donec ac leo at nunc viverra molestie ac viverra nisi. Proin interdum at turpis at varius. Nunc sit amet ex suscipit, convallis ligula eu, pretium turpis. Sed ultricies neque vel mi malesuada, et mollis risus lobortis. Sed condimentum venenatis mauris, id elementum dolor gravida ac. Sed sodales tempus neque, quis iaculis arcu tincidunt ut. Donec vitae faucibus dui. In hac habitasse platea dictumst. Donec erat ex, ullamcorper a massa a, porttitor porta ligula.
+The second use effect is triggered, which then mutates the infiniteQueries data with the newly fetched one, using the `updateQueryData` function which is where the mutation logic resides. That function looks as follows:
+
+```
+function updateQueryData(dataState, updateType, pageNum, updateData = null) {
+   if (updateType === “add” && pageNum && updateData) {
+     const queryWithMatchingIndex = dataState?.pages.findIndex((page) =>
+       page.previous === updateData.previous && page.next === updateData.next,
+     );
+     let updateState = {};
+    if (queryWithMatchingIndex > -1) {
+     updateState = {
+       pages: dataState.pages.toSpliced(
+         queryWithMatchingIndex,
+         queryWithMatchingIndex + 1,
+         updateData,
+       ),
+       pageParams:
+         dataState?.pages.length === 1
+         ? [pageNum]
+         : […dataState.pageParams, pageNum],
+     };
+   } else if (queryWithMatchingIndex === -1 && dataState?.pages.length > 1) {
+     updateState = {
+       pages: [
+         …dataState.pages.slice(0, dataState?.pages.length — 1),
+         updateData,
+       ],
+       pageParams: [
+         …dataState.pageParams.slice(0, dataState?.pageParams.length — 1),
+         pageNum,
+       ],
+     };
+   } else if (queryWithMatchingIndex === -1 && dataState?.pages.length === 1) {
+     updateState = {
+       pages: [updateData],
+       pageParams: [pageNum],
+     };
+   }
+ return updateState;
+ }
+}
+```
+
+The above function basically, checks the index passed in and based on that, it mutates the pages to replace it with the updated page as needed. The doc example can be found [here](https://tanstack.com/query/latest/docs/framework/react/guides/infinite-queries#manually-removing-first-page). This should be able to address your needs relating to manual mutation if you are ever faced with an edge-case or implementation requirement as in my case or that fits implementing such logic.
+
+Here is a link to my [github](https://github.com/strapchay), if you would like to follow.
