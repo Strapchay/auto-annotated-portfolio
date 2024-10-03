@@ -22,7 +22,7 @@ sections:
 
     media:
       type: ImageBlock
-      url: /images/about.jpg
+      url: /images/profile_logo_XOZAB_3a380fe17471110e2a3150c13c96948a.png
       altText: Hero image
     styles:
       self:
