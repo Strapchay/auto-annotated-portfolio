@@ -7,7 +7,7 @@ client: Side Project
 description: A basic react app that uses redux for state management
 featuredImage:
   type: ImageBlock
-  url: /images/bg1.jpg
+  url: /images/todo_rdx.png
   altText: Project thumbnail image
 media:
   type: ImageBlock
