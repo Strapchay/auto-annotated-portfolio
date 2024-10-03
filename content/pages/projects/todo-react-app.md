@@ -9,7 +9,7 @@ description: >-
 featuredImage:
   type: ImageBlock
   url: /images/todo-app.png
-  altText: Project thumbnail image
+  altText: todo react thumbnail image
   caption: ''
   elementId: ''
 media:
