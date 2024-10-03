@@ -2,7 +2,7 @@
 type: ProjectLayout
 title: Journal App js
 colors: colors-a
-date: '2023-11-20'
+date: '2023-11-11'
 client: Awesome client
 description: >-
   It’s hard to imagine that I’ve that I wrote all this code by myself, probably
