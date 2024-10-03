@@ -15,7 +15,7 @@ featuredImage:
 media:
   type: ImageBlock
   url: /images/journal-app.png
-  altText: Project image
+  altText: journal react image
   caption: Caption of the image
   elementId: ''
 addTitleSuffix: true
