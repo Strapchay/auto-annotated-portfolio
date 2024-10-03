@@ -2,7 +2,7 @@
 type: ProjectLayout
 title: Todo React Redux
 colors: colors-a
-date: '2024-06-15'
+date: '2024-06-12'
 client: Awesome client
 description: >-
   It’s hard to imagine that I’ve that I wrote all this code by myself, probably
