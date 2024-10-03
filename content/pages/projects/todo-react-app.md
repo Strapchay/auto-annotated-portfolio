@@ -2,7 +2,7 @@
 type: ProjectLayout
 title: 'Todo React '
 date: '2024-08-15'
-client: Awesome client
+client: Side Project
 description: >-
   Nunc rutrum felis dui, ut consequat sapien scelerisque vel. Integer
   condimentum dignissim justo vel faucibus.
