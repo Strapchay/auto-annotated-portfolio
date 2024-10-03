@@ -2,7 +2,7 @@
 type: ProjectLayout
 title: Journal React
 date: '2024-09-30'
-client: Awesome client
+client: Side project
 description: >-
   Nunc rutrum felis dui, ut consequat sapien scelerisque vel. Integer
   condimentum dignissim justo vel faucibus.
