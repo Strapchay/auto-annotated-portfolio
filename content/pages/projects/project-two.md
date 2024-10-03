@@ -5,9 +5,9 @@ colors: colors-a
 date: '2023-11-11'
 client: Side project
 description: >-
-  It’s hard to imagine that I’ve that I wrote all this code by myself, probably
-  because I worked with an entire team :) but they definitely followed my lead
-  most of the time.
+  It was a great experience working on this project, felt overwhelming when
+  working on it but it was amazing and specifically what i envisioned for the
+  project whilst starting out with it.
 featuredImage:
   type: ImageBlock
   url: /images/bg2.jpg
