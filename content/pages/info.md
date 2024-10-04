@@ -201,8 +201,6 @@ sections:
     subtitle: 'Skills:'
     items:
       - type: Label
-        label: React
-      - type: Label
         label: Microsoft Office
       - type: Label
         label: Next.js
