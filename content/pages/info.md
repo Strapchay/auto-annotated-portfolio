@@ -204,6 +204,9 @@ sections:
         label: Django
       - type: Label
         label: Django REST
+      - type: Label
+        label: Python
+        url: ''
   - type: DividerSection
     styles:
       self:
