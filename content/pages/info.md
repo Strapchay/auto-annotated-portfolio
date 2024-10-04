@@ -163,7 +163,7 @@ sections:
           self:
             textAlign: left
       - type: FeaturedItem
-        title: Item Title
+        title: Resume
         subtitle: ''
         text: ''
         elementId: ''
