@@ -240,6 +240,9 @@ sections:
       - type: Label
         label: Traefik
         url: ''
+      - type: Label
+        label: Postgresql
+        url: ''
   - type: DividerSection
     styles:
       self:
