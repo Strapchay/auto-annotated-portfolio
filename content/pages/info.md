@@ -78,7 +78,7 @@ sections:
         elementId: ''
     spacing: 34
     columns: 5
-    aspectRatio: '3:2'
+    aspectRatio: '1:1'
     showCaption: false
     enableHover: false
     styles:
