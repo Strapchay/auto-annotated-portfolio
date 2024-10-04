@@ -229,6 +229,9 @@ sections:
         label: Nginx
         url: ''
       - type: Label
+        label: Github Actions
+        url: ''
+      - type: Label
         label: Docker
         url: ''
   - type: DividerSection
