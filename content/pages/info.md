@@ -201,8 +201,6 @@ sections:
     subtitle: 'Skills:'
     items:
       - type: Label
-        label: Next.js
-      - type: Label
         label: Pancakes
       - type: Label
         label: C++
