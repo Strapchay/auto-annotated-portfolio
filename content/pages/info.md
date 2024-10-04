@@ -213,6 +213,9 @@ sections:
       - type: Label
         label: React
         url: ''
+      - type: Label
+        label: CSS
+        url: ''
   - type: DividerSection
     styles:
       self:
