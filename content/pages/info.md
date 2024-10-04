@@ -203,7 +203,7 @@ sections:
       - type: Label
         label: Django
       - type: Label
-        label: Swift
+        label: Django REST
   - type: DividerSection
     styles:
       self:
