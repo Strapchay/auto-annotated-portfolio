@@ -61,7 +61,7 @@ sections:
         borderStyle: solid
   - type: MediaGallerySection
     colors: colors-f
-    subtitle: 'I worked with these folks:'
+    subtitle: 'I worked on this platform and with this folks:'
     images:
       - type: ImageBlock
         url: /images/freelancer-staff.svg
