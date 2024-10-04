@@ -235,6 +235,9 @@ sections:
         label: Docker
         url: ''
       - type: Label
+        label: Sqlite
+        url: ''
+      - type: Label
         label: Traefik
         url: ''
   - type: DividerSection
