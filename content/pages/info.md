@@ -223,7 +223,7 @@ sections:
         label: Tailwind
         url: ''
       - type: Label
-        label: Message Ques(RBT| Redis)
+        label: Message Queues(RBT| Redis)
         url: ''
       - type: Label
         label: Nginx
