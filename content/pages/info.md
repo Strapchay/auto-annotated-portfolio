@@ -207,6 +207,9 @@ sections:
       - type: Label
         label: Python
         url: ''
+      - type: Label
+        label: JavaScript
+        url: ''
   - type: DividerSection
     styles:
       self:
