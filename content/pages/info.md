@@ -65,7 +65,7 @@ sections:
     images:
       - type: ImageBlock
         url: /images/freelancer-staff.svg
-        altText: Logo one
+        altText: Freelancer Logo
         caption: Logo one
       - type: ImageBlock
         url: /images/7hills.webp
