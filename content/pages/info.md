@@ -216,6 +216,9 @@ sections:
       - type: Label
         label: CSS
         url: ''
+      - type: Label
+        label: HTML
+        url: ''
   - type: DividerSection
     styles:
       self:
