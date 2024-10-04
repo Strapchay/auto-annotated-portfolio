@@ -244,7 +244,7 @@ sections:
         label: Postgresql
         url: ''
   - type: TextSection
-    colors: colors-b
+    colors: colors-d
     variant: variant-b
     title: Experience
     text: >-
