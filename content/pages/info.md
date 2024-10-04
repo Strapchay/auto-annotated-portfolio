@@ -126,7 +126,7 @@ sections:
         actions:
           - type: Link
             label: Twitter
-            url: 'https://twitter.com/'
+            url: 'https://twitter.com/Strapchay'
         styles:
           self:
             textAlign: left
