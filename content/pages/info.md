@@ -234,6 +234,9 @@ sections:
       - type: Label
         label: Docker
         url: ''
+      - type: Label
+        label: Traefik
+        url: ''
   - type: DividerSection
     styles:
       self:
