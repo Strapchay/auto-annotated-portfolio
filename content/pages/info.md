@@ -201,7 +201,7 @@ sections:
     subtitle: 'Skills:'
     items:
       - type: Label
-        label: Pancakes
+        label: Django
       - type: Label
         label: Swift
   - type: DividerSection
