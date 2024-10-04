@@ -172,7 +172,7 @@ sections:
             textAlign: left
         actions:
           - type: Link
-            label: Learn more
+            label: Resume
             altText: ''
             url: 'https://flowcv.com/resume/jah819f4ar'
             showIcon: false
