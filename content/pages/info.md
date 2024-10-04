@@ -222,6 +222,9 @@ sections:
       - type: Label
         label: Tailwind
         url: ''
+      - type: Label
+        label: Nginx
+        url: ''
   - type: DividerSection
     styles:
       self:
