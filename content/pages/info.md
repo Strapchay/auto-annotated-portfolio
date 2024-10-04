@@ -141,27 +141,28 @@ sections:
       - type: FeaturedItem
         actions:
           - type: Link
-            label: CodePen
-            url: 'https://codepen.io/'
-        styles:
-          self:
-            textAlign: left
-      - type: FeaturedItem
-        actions:
-          - type: Link
             label: Discord
             url: 'https://discord.com/'
         styles:
           self:
             textAlign: left
       - type: FeaturedItem
-        actions:
-          - type: Link
-            label: Instagram
-            url: 'https://www.instagram.com/'
+        title: ''
+        subtitle: ''
+        text: ''
+        elementId: ''
         styles:
           self:
             textAlign: left
+        actions:
+          - type: Link
+            label: Resume
+            altText: ''
+            url: 'https://flowcv.com/resume/jah819f4ar'
+            showIcon: false
+            icon: arrowRight
+            iconPosition: right
+            elementId: ''
     columns: 3
     spacingX: 120
     spacingY: 0
@@ -243,16 +244,4 @@ sections:
       - type: Label
         label: Postgresql
         url: ''
-  - type: DividerSection
-    styles:
-      self:
-        width: wide
-        padding:
-          - pt-12
-          - pb-12
-          - pl-4
-          - pr-4
-        justifyContent: center
-        borderWidth: 1
-        borderStyle: solid
 ---
