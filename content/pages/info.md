@@ -73,7 +73,7 @@ sections:
         caption: Logo five
       - type: ImageBlock
         url: /images/new-logo.b1d83ec8c87691aedaec.png
-        altText: altText of the image
+        altText: Rankup Logo
         caption: Caption of the image
         elementId: ''
     spacing: 34
