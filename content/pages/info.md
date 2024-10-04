@@ -245,7 +245,7 @@ sections:
         url: ''
   - type: TextSection
     colors: colors-f
-    variant: variant-a
+    variant: variant-b
     title: Experience
     text: >-
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
