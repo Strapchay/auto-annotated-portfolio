@@ -77,7 +77,7 @@ sections:
         caption: Caption of the image
         elementId: ''
     spacing: 34
-    columns: 4
+    columns: 3
     aspectRatio: '16:9'
     showCaption: false
     enableHover: false
