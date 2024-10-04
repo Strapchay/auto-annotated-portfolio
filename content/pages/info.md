@@ -210,6 +210,9 @@ sections:
       - type: Label
         label: JavaScript
         url: ''
+      - type: Label
+        label: React
+        url: ''
   - type: DividerSection
     styles:
       self:
