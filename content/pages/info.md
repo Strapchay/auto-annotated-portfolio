@@ -219,6 +219,9 @@ sections:
       - type: Label
         label: HTML
         url: ''
+      - type: Label
+        label: Tailwind
+        url: ''
   - type: DividerSection
     styles:
       self:
