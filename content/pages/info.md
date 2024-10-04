@@ -69,7 +69,7 @@ sections:
         caption: Logo one
       - type: ImageBlock
         url: /images/7hills.webp
-        altText: Logo five
+        altText: 7hills Logo
         caption: Logo five
       - type: ImageBlock
         url: /images/new-logo.b1d83ec8c87691aedaec.png
