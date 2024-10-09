@@ -42,6 +42,30 @@ bottomSections:
         justifyContent: center
     showFeaturedImage: true
     showReadMoreLink: true
+  - type: ContactSection
+    backgroundSize: full
+    colors: colors-f
+    styles:
+      self:
+        height: auto
+        width: narrow
+        margin:
+          - mt-0
+          - mb-0
+          - ml-4
+          - mr-4
+        padding:
+          - pt-24
+          - pb-24
+          - pr-4
+          - pl-4
+        alignItems: center
+        justifyContent: center
+        flexDirection: row
+      title:
+        textAlign: left
+      text:
+        textAlign: left
 ---
 When working with remote state management in a react project, react-query is one of the available options to go for and my technology of choice for this use-case.
 

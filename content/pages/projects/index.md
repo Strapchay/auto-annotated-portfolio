@@ -28,5 +28,29 @@ projectFeed:
 styles:
   title:
     textAlign: left
-bottomSections: []
+bottomSections:
+  - type: ContactSection
+    backgroundSize: full
+    colors: colors-f
+    styles:
+      self:
+        height: auto
+        width: narrow
+        margin:
+          - mt-0
+          - mb-0
+          - ml-4
+          - mr-4
+        padding:
+          - pt-24
+          - pb-24
+          - pr-4
+          - pl-4
+        alignItems: center
+        justifyContent: center
+        flexDirection: row
+      title:
+        textAlign: left
+      text:
+        textAlign: left
 ---
