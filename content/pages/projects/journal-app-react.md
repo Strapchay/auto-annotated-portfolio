@@ -32,10 +32,8 @@ This is a port of the vanilla JS of the same project into a react project. It ma
 
 It was pretty great working on this project, it showcases my skill in working on a certain level of complexity with react and also in porting projects into react logic.
 
+Website: [journal\_react](https://journalinghub-rdx.netlify.app)
 
-
-Website: [journal\_react,](https://journalinghub-rdx.netlify.app)
-
-Github FE:[ journal\_react](https://github.com/strapchay/journal_reactournal_react)
+Github FE:[ journal\_react](https://github.com/strapchay/journal_react)
 
 Github BE:[ journal\_api](https://github.com/strapchay/journal_api)
