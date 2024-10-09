@@ -31,3 +31,7 @@ backgroundImage:
 The porting of this project makes use of react and react redux. It showcases, my skill in implementing complex  state management with redux, both local and remote. Making use of createAsyncThunks, modern redux toolkit, porting, the offline state functionality making use of localStorage and also syncing it with the api state when network becomes available using the ported `syncLocalStorageToAPI` class. It also keeps track and syncs the todo list reordering, makes use of an overlay component through a createPortal functionality. Overall, it was create working on the project, solidifying my redux skill
 
 Website: [todo\_react](https://appistodo-react.netlify.app)
+
+Github FE: [todo\_react](https://github.com/strapchay/todo_redux)
+
+Github BE: [todo\_api](https://github.com/strapchay/todo_api)
