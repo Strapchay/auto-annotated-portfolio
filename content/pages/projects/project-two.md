@@ -17,14 +17,7 @@ media:
   url: /images/journal-app.png
   altText: Project image
 ---
-<div style="text-align: left"><iframe 
-    src="https\://player.vimeo.com/video/1020517053?title=0\&byline=0\&portrait=0\&badge=0\&autopause=0\&player\_id=0\&app\_id=58479" 
-    width="508" 
-    height="582" 
-    frameborder="0" 
-    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-    title="journal app">
-</iframe>
+[Watch the Video](https://vimeo.com/1020517053)
 
 This project was meant to replicate notion's journal table view, which i think was aptly captured with the end result of the project. The major focus of the project is mainly about code architecture, integration with api, implementing design patterns where necessary  and building on my vanilla js skills.</div>
 
