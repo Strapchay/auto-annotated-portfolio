@@ -18,7 +18,7 @@ media:
   url: /images/todo-app.png
   altText: Project image
 ---
-\[Watch the Video]\(https\://vimeo.com/1044993317)
+[Watch the video](https://vimeo.com/1044993317)
 
 This app is meant to replicate a todo app which is responsive and has offline capability. The project focused on code architecture, integration with api, implementing code sync with remote data and offline usability and building on my vanilla js skills.
 
